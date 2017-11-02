@@ -1,0 +1,101 @@
+/*
+TODO: //DONE END. This statement ends a program
+
+TODO: //DONe END_STATEMENT. All commands should end with a semicolon
+
+TODO: //DONE POINT. when we match the command to plot a point
+
+TODO: //DONE LINE. when we match the command to draw a line. 
+
+TODO: //DONE CIRCLE. when we match the command to draw a circle.
+
+TODO: //DONE RECTANGLE. when we match the command to draw a rectangle.
+
+TODO: //DONE SET_COLOR. matches the command to change colors.
+
+TODO: //DONE INT. matches and integer value. 
+
+TODO: //DONE FLOAT. matches the floating-point value. 
+
+TODO: //DONE A way to match tabs,spaces,or newlines, and to ignore them
+
+TODO: //PROLLY DOING THIS LAST IDK a way to match anything not listed above, and to tell the user they messed up.
+*/
+
+%{
+	#include<stdio.h>
+	#include<stdlib.h>
+	#include"zoomjoystrong.tab.h"
+	
+	//(i think) these only need to be here if we want the lex file to actually execute like a program might i.e. calculate shit for us
+	//float f = 0;
+	//int i = 0;
+%}
+
+%option noyywrap
+
+%%
+
+"QuitProgram()" {
+	printf("END '%s'\n", yytext);
+	//return END;
+	}
+
+[. \n\t]*; {
+	printf("END_STATEMENT '%s'\n", yytext);
+	//return END_STATEMENT;
+	//possibly also written as [A-Za-z0-9 \n\t]*;
+	}
+
+"point"([ ][0-9]+(\.[0-9]+)?){2} {
+	printf("POINT '%s'\n", yytext);
+	//return POINT;
+	}
+
+"line"([ ][0-9]+(\.[0-9]+)?){4} {
+	printf("LINE '%s'\n", yytext);
+	//return LINE
+	}
+
+"circle"([ ][0-9]+(\.[0-9]+)?){3} {
+	//ECHO;
+	//return CIRCLE
+	}
+
+"rectangle"([ ][0-9]+(\.[0-9]+)?){4} {
+	//ECHO;
+	//return RECTANGLE
+	}
+
+"set_color"([ ]([0-1]?[0-9]{1,2})|([2][0-4][0-9])|([2][5][0-5])){3} {
+	//ECHO;
+	//return SET_COLOR
+	//for rgb 0-255, 0-255, 0-255 value
+	}
+
+[0-9]+ {
+	//yylval.val = atoi(yytext);
+	printf("INT '%s'\n", yytext);
+	//return INT;
+	}
+
+[0-9]+\.[0-9]+ {
+	//yylval.val = atof(yytext);
+	printf("FLOAT '%s'\n", yytext);
+	//return FLOAT;
+	}
+
+
+[ \n\t]+ {
+	printf("WHITESPACE '%s'\n", yytext);
+	//return WHITESPACE;
+}
+
+
+%%
+
+int main(int argc, char** argv){
+	yylex();	//start lexing!
+	return 0;
+}
+

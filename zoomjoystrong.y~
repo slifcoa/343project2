@@ -1,0 +1,40 @@
+/* Bison/parse file done by Adam Slifco*/
+
+%{
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+%} 
+
+%start program
+
+/*Symbol semantic values*/
+%union {
+    int iVal;
+    char sym;
+    float fVal;
+}
+%token <iVal> INT
+%token <fVal> FLOAT
+%token <sym> END POINT LINE CIRCLE RECTANGLE SET_COLOR WHITESPACE 
+/*Grammar rules*/
+%%
+
+program:
+	|
+	END;
+
+%%
+
+//Function Definitions
+int main(int argc, char** argv)
+{
+   return(yyparse());
+}
+
+/*yyerror(s)
+char *s;
+{
+    fprintf(stderr, "%s\n" ,s);
+}*/
