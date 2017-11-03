@@ -124,12 +124,10 @@ union YYSTYPE
 {
 #line 18 "zoomjoystrong.y" /* yacc.c:355  */
 
-    int iVal;
-    char sym;
-    float fVal;
-	char* val;
+    int iV;
+    float fV;
 
-#line 133 "zoomjoystrong.tab.c" /* yacc.c:355  */
+#line 131 "zoomjoystrong.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -146,7 +144,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 150 "zoomjoystrong.tab.c" /* yacc.c:358  */
+#line 148 "zoomjoystrong.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -444,9 +442,9 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    31,    31,    32,    34,    35,    36,    42,    43,    44,
-      45,    46,    50,    56,    62,    68,    74,    80,    86,    92,
-      98,   107,   116
+       0,    29,    29,    30,    32,    33,    34,    40,    41,    42,
+      43,    44,    48,    54,    60,    66,    72,    78,    84,    90,
+      96,   105,   114
 };
 #endif
 
@@ -1249,110 +1247,110 @@ yyreduce:
   switch (yyn)
     {
         case 6:
-#line 37 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 35 "zoomjoystrong.y" /* yacc.c:1646  */
     { 
 		  //retrieved this code from the almighty stack overflow -- https://stackoverflow.com/questions/16911792/how-to-continue-parser-after-syntax-error -- code provided by user Aymanadou
 		  yyerrok; yyclearin; printf("\n INVALID COMMAND \n");
 		}
-#line 1258 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1256 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 51 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 49 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							line((yyvsp[-4].iVal), (yyvsp[-3].iVal), (yyvsp[-2].iVal), (yyvsp[-1].iVal));
+							line((yyvsp[-4].iV), (yyvsp[-3].iV), (yyvsp[-2].iV), (yyvsp[-1].iV));
 						}
-#line 1266 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1264 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 57 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 55 "zoomjoystrong.y" /* yacc.c:1646  */
     {						
-							line((yyvsp[-4].fVal), (yyvsp[-3].fVal), (yyvsp[-2].fVal), (yyvsp[-1].fVal));
+							line((yyvsp[-4].fV), (yyvsp[-3].fV), (yyvsp[-2].fV), (yyvsp[-1].fV));
 						}
-#line 1274 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1272 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 63 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 61 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							point((yyvsp[-2].iVal), (yyvsp[-1].iVal));
+							point((yyvsp[-2].iV), (yyvsp[-1].iV));
 						}
-#line 1282 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1280 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 69 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 67 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							point((yyvsp[-2].fVal), (yyvsp[-1].fVal));
+							point((yyvsp[-2].fV), (yyvsp[-1].fV));
 						}
-#line 1290 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1288 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 75 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 73 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							circle((yyvsp[-3].iVal), (yyvsp[-2].iVal), (yyvsp[-1].iVal));
+							circle((yyvsp[-3].iV), (yyvsp[-2].iV), (yyvsp[-1].iV));
 						}
-#line 1298 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1296 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 81 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 79 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							circle((yyvsp[-3].fVal), (yyvsp[-2].fVal), (yyvsp[-1].fVal));
+							circle((yyvsp[-3].fV), (yyvsp[-2].fV), (yyvsp[-1].fV));
 						}
-#line 1306 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1304 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 87 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 85 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							rectangle((yyvsp[-4].iVal), (yyvsp[-3].iVal), (yyvsp[-2].iVal), (yyvsp[-1].iVal));
+							rectangle((yyvsp[-4].iV), (yyvsp[-3].iV), (yyvsp[-2].iV), (yyvsp[-1].iV));
 						}
-#line 1314 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1312 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 93 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 91 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							rectangle((yyvsp[-4].fVal), (yyvsp[-3].fVal), (yyvsp[-2].fVal), (yyvsp[-1].fVal));
+							rectangle((yyvsp[-4].fV), (yyvsp[-3].fV), (yyvsp[-2].fV), (yyvsp[-1].fV));
 						}
-#line 1322 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1320 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 99 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 97 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							if((yyvsp[-3].iVal) < 0 || (yyvsp[-3].iVal) > 255 || (yyvsp[-2].iVal) < 0 || (yyvsp[-2].iVal) > 255 || (yyvsp[-1].iVal) < 0 || (yyvsp[-1].iVal) > 255)
+							if((yyvsp[-3].iV) < 0 || (yyvsp[-3].iV) > 255 || (yyvsp[-2].iV) < 0 || (yyvsp[-2].iV) > 255 || (yyvsp[-1].iV) < 0 || (yyvsp[-1].iV) > 255)
 								printf("RGB color values range from 0 to 255 \n");
 							else
-								set_color((yyvsp[-3].iVal), (yyvsp[-2].iVal), (yyvsp[-1].iVal));
+								set_color((yyvsp[-3].iV), (yyvsp[-2].iV), (yyvsp[-1].iV));
 						}
-#line 1333 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1331 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 108 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 106 "zoomjoystrong.y" /* yacc.c:1646  */
     {
-							if((yyvsp[-3].fVal) < 0.0 || (yyvsp[-3].fVal) > 255.0 || (yyvsp[-2].fVal) < 0.0 || (yyvsp[-2].fVal) > 255.0 ||(yyvsp[-1].fVal) < 0.0 || (yyvsp[-1].fVal) > 255.0)
+							if((yyvsp[-3].fV) < 0.0 || (yyvsp[-3].fV) > 255.0 || (yyvsp[-2].fV) < 0.0 || (yyvsp[-2].fV) > 255.0 ||(yyvsp[-1].fV) < 0.0 || (yyvsp[-1].fV) > 255.0)
 								printf("RGB color values range from 0 to 255 \n");
 							else
-								set_color((yyvsp[-3].fVal), (yyvsp[-2].fVal), (yyvsp[-1].fVal));
+								set_color((yyvsp[-3].fV), (yyvsp[-2].fV), (yyvsp[-1].fV));
 						}
-#line 1344 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1342 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 117 "zoomjoystrong.y" /* yacc.c:1646  */
+#line 115 "zoomjoystrong.y" /* yacc.c:1646  */
     {
 							finish();
 						}
-#line 1352 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1350 "zoomjoystrong.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1356 "zoomjoystrong.tab.c" /* yacc.c:1646  */
+#line 1354 "zoomjoystrong.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1580,7 +1578,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 122 "zoomjoystrong.y" /* yacc.c:1906  */
+#line 120 "zoomjoystrong.y" /* yacc.c:1906  */
 
 
 //Function Definitions

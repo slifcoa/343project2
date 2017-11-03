@@ -16,15 +16,13 @@
 
 /*Symbol semantic values*/
 %union {
-    int iVal;
-    char sym;
-    float fVal;
-	char* val;
+    int iV;
+    float fV;
 }
-%token <iVal> INT
-%token <fVal> FLOAT
-%token <sym> END_STATEMENT
-%token	<val> LINE POINT CIRCLE RECTANGLE SET_COLOR END INVALID
+%token <iV> INT
+%token <fV> FLOAT
+%token END_STATEMENT
+%token LINE POINT CIRCLE RECTANGLE SET_COLOR END INVALID
 
 %%
 

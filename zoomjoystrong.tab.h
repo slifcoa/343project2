@@ -65,12 +65,10 @@ union YYSTYPE
 {
 #line 18 "zoomjoystrong.y" /* yacc.c:1909  */
 
-    int iVal;
-    char sym;
-    float fVal;
-	char* val;
+    int iV;
+    float fV;
 
-#line 74 "zoomjoystrong.tab.h" /* yacc.c:1909  */
+#line 72 "zoomjoystrong.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

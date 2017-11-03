@@ -11,64 +11,48 @@
 	#include"zoomjoystrong.tab.h"
 %}
 
-  //Values
-int [0-9]+
-float [0-9]+\.[0-9]+
-  //Commands
-line "line"
-point "point"
-circle "circle"
-rectangle "rectangle"
-set_color "set_color"
-end "end"
-  //Symbols
-whitespace [ \n\t]+
-end_statement ";"
-
 %option noyywrap
 
 %%
 
-{int} {
-	yylval.iVal = atoi(yytext);
+[0-9]+ 	{
+	yylval.iV = atoi(yytext);
 	return INT;
 	}
 
-{float} {
-	yylval.fVal = atof(yytext);
+[0-9]+\.[0-9]+ {
+	yylval.fV = atof(yytext);
 	return FLOAT;
 	}
 
-{line} {
+"line" 	{
 	return LINE;
 	}
 
-{point} {
-	yylval.val = yytext;
+"point"	{
 	return POINT;
 	}
 
-{circle} {
+"circle" {
 	return CIRCLE;
-	}
+   	 }
 
-{rectangle} {
+"rectangle" {
 	return RECTANGLE;
 	}
 
-{set_color} {
+"set_color" {
 	return SET_COLOR;
 	}
 
-{end} {
+"end" {
 	return END;
+      }
+[ \n\t]+ {
+        
 	}
 
-{whitespace} {
-      
-	}
-
-{end_statement} {
+";" {
 	return END_STATEMENT;
 	}
 
